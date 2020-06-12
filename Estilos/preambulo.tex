@@ -1,6 +1,9 @@
 %
 %                       Preámbulo del documento
 %
+%           Contiene todos los paquetes necesarios para la
+%                       compilación del documento
+%
 %-------------------------------------------------------------------------
 %
 %Copyright 2020 David Torrez Reyes
@@ -19,3 +22,71 @@
 %You should have received a copy of the GNU General Public License
 %along with BookTemplete.  If not, see <https://www.gnu.org/licenses/>.
 %-------------------------------------------------------------------------
+
+
+
+
+%                  Paquetes de idiomas y codificación
+%-------------------------------------------------------------------------
+% El paquete inputenc modifica la codificación de entrada de LaTeX.
+% Permite escribir con acentos, símbolos inusuales, etc. Como parámetro 
+% opcional ingresamos la codificación deseada (latin1) ISO 8859-1.  
+\usepackage[latin1]{inputenc}
+
+
+% El paquete babel gestiona el idioma en el cual se desea trabajar, en
+% este caso español (spanish)
+\usepackage[spanish]{babel}
+
+
+% El paquete fontenc gestiona la codificación de salida del documento.
+% EL parámetro (T1) indica la codificación estándar de LaTeX
+\usepackage[T1]{fontenc}
+
+
+
+
+%                  Paquetes de gráficos, tablas
+%-------------------------------------------------------------------------
+% El entorno multicol, es de gran utilidad en los sitios donde se
+% quieren poner dos figuras una al lado de la otra.
+\usepackage{multicol}
+
+
+% El entorno tabularx, sirve para hacer tablas con  párrafos sin tener que
+% indicar  el ancho  de cada  columna de párrafo particular.
+\usepackage{tabularx}
+
+% Paquete necesario para la adición de figuras.
+% Con el comando \graphcspath indicamos el directorio en el cual se encuentran
+% las imágenes a utilizar 
+\usepackage{graphicx}
+\graphicspath{{Pictures/}}
+
+
+
+
+%                 Paquetes de configuración de paginas 
+%-------------------------------------------------------------------------
+% Paquete geometry, gestiona los margenes del documento.
+\usepackage[top=3cm,bottom=3cm,left=3cm,right=3cm]{geometry}
+
+
+
+
+%                 Paquetes para la gestión de colores 
+%-------------------------------------------------------------------------
+% EL paquete xcolor, necesario para la creación y uso de colores.
+\usepackage{xcolor}
+
+
+
+
+%     Paquetes para la creación de ecuaciones y simbología matemática 
+%-------------------------------------------------------------------------
+% Paquetes necesarios para introducir simbología matemática, ecuaciones,
+% teoremas, etc.
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}

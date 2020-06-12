@@ -1,0 +1,4 @@
+#   Archivos ignorados por git
+build/Estilos
+build/main.*
+!build/main.pdf

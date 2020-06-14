@@ -1,0 +1,102 @@
+%
+%                           	Tablas de Contenido
+%
+%-------------------------------------------------------------------------
+%
+%Copyright 2020 David Torrez Reyes
+%This file is part of BookTemplate.
+%
+%BookTemplate is free software: you can redistribute it and/or modify
+%it under the terms of the GNU General Public License as published by
+%the Free Software Foundation, either version 3 of the License, or
+%(at your option) any later version.
+%
+%BookTemplate is distributed in the hope that it will be useful,                 
+%but WITHOUT ANY WARRANTY; without even the implied warranty of
+%MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%GNU General Public License for more details.
+%
+%You should have received a copy of the GNU General Public License
+%along with BookTemplete.  If not, see <https://www.gnu.org/licenses/>.
+%-------------------------------------------------------------------------
+
+
+
+
+% En este archivo se generaran las tablas de contenido como puede ser,
+% lista de capítulos, secciones, figuras, ejercicios, etc.  
+%                           Configuración
+%-------------------------------------------------------------------------
+
+%  Con este comando manejamos el nivel de items de la tabla de contenidos
+%  1. Capítulo
+%       1.1. Sección
+\setcounter{tocdepth}{2}
+
+% Le  pedimos  que nos  numere  todos  los  items hasta  el  nivel
+% \subsubsection en el cuerpo del documento.
+\setcounter{secnumdepth}{3}
+
+% Creamos los diferentes índices.
+% Lo primero un  poco de trabajo en los marcadores  del PDF. No quiero
+% que  salga una  entrada  por cada  índice  a nivel  0...  si no  que
+% aparezca un marcador "Índices", que  tenga dentro los otros tipos de
+% índices.  Total, que creamos el marcador "Índices".
+% Antes de  la creación  de los índices,  se añaden los  marcadores de
+% nivel 1.
+
+%\ifpdf
+%   \pdfbookmark{Índices}{indices}
+%\fi
+
+
+
+%               Tablas de Contenidos
+%....................................................
+
+% No se que haga... Manejar los marcadores del pdf
+\ifpdf
+   \pdfbookmark[1]{Tabla de contenidos}{tabla de contenidos}
+\fi
+
+% Generamos la cabecera del Índice
+\cabecera{Índice}
+% Creamos la tabla de contenidos
+\tableofcontents
+% Nueva pagina
+\newpage 
+
+
+
+%               Índice de Figuras
+%....................................................
+
+% No se que haga... Manejar los marcadores del pdf
+\ifpdf
+   \pdfbookmark[1]{Índice de figuras}{indice de figuras}
+\fi
+
+% Creamos el indice de figuras
+\listoffigures
+% Nueva pagina
+\newpage
+
+
+
+
+
+%               Índice de Tablas
+%....................................................
+
+% No se que haga... Manejar los marcadores del pdf
+\ifpdf
+   \pdfbookmark[1]{Índice de tablas}{indice de tablas}
+\fi
+
+% Creamos el indice de figuras
+\listoftables
+% Nueva pagina
+\newpage
+\cleardoublepage
+\restauraCabecera
+\pagenumbering{arabic}

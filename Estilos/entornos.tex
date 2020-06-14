@@ -1,0 +1,140 @@
+%
+%                           	Entornos
+%
+%           Contiene los comandos necesarios crear nuevos ambientes
+%        o entornos de trabajo como frases celebres, observaciones, etc
+%
+%-------------------------------------------------------------------------
+%
+%Copyright 2020 David Torrez Reyes
+%This file is part of BookTemplate.
+%
+%BookTemplate is free software: you can redistribute it and/or modify
+%it under the terms of the GNU General Public License as published by
+%the Free Software Foundation, either version 3 of the License, or
+%(at your option) any later version.
+%
+%BookTemplate is distributed in the hope that it will be useful,
+%but WITHOUT ANY WARRANTY; without even the implied warranty of
+%MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%GNU General Public License for more details.
+%
+%You should have received a copy of the GNU General Public License
+%along with BookTemplete.  If not, see <https://www.gnu.org/licenses/>.
+%-------------------------------------------------------------------------
+
+
+%                       Mis Entornos
+%----------------------------------------------------------------------------
+% La sintaxis para la definición de entornos nuevos es
+%
+% \newenvironment{ENTORNO}[ARGUMENTOS]{ANTES}{DESPUÉS}
+%
+% En ANTES escribiremos el grupo de comandos que hay que ejecutar al iniciar 
+% el entorno y, por tanto, los que le darán el formato al mismo, y DESPUÉS, 
+% los que se activarán tras el texto. El resto de elementos funciona como antes.
+%-----------------------------------------------------------------------------
+
+
+
+
+%                       Frases Celebres
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Ejemplo de uso:
+% 
+% \begin{FraseCelebre}
+%   \begin{Frase}
+%     ...
+%   \end{Frase}
+%   \begin{Fuente}
+%     ...
+%   \end{Fuente}
+% \end{FraseCelebre}
+%''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+%
+% Definición del entorno de Frase Celebre
+\newenvironment{FraseCelebre}%
+  % Entorno para crear una lista personalizada:
+  % \begin{list}{Etiqueta}{Declaraciones}
+  % Etiqueta: Marca de los items
+  % Declaraciones: Definiciones de longitud  
+  {\begin{list}{}{%
+    % Definimos margen izquierdo de logitud 0.5 el espacio del texto
+    \setlength{\leftmargin}{0.5\textwidth}%
+    % No hay espacio extra entre párrafos de la lista 
+    \setlength{\parsep}{0cm}%
+    % Espacio vertical añadido al inicio y final de la lista
+    \addtolength{\topsep}{0.5cm}%
+    }
+  }
+  {\unskip \end{list}}
+ 
+
+% Definición del entorno de Frase
+\newenvironment{Frase}%
+  % Alineación a la derecha con estilo cursiva y tamaño \small
+  {\item \begin{flushright}%
+    \small\em}% 
+  {\end{flushright}}
+
+
+% Definición del entorno de Frase
+\newenvironment{FraseA}%
+  % Alineación a la derecha con estilo cursiva y tamaño \small
+  {\item \begin{center}%
+    \small\em}% 
+  {\end{center}}
+
+% Definición del entorno de Frase 
+\newenvironment{Fuente}%
+   % Alineación a la derecha y tamaño de letra \small   
+{\item \begin{flushright}\small}%
+  {\end{flushright}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+%                       Frases Celebres Centradas
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Ejemplo de uso:
+% 
+% \begin{FraseCelebreCentrada}
+%   \begin{FraseCentrada}
+%     ...
+%   \end{FraseCentrada}
+%   \begin{FuenteCentrada}
+%     ...
+%   \end{FuenteCentrada}
+% \end{FraseCelebreCentrada}
+%''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+%
+
+\newenvironment{FraseCelebreCentrada}%
+  % Declaraciones: Definiciones de longitud  
+  {\begin{list}{}{%
+    % Definimos margen izquierdo de logitud 0 el espacio del texto
+    \setlength{\leftmargin}{0cm}%
+    % No hay espacio extra entre párrafos de la lista 
+    \setlength{\parsep}{0.5cm}%
+    % Espacio vertical añadido al inicio y final de la lista
+    \addtolength{\topsep}{0.5cm}%
+    }
+  }
+  {\unskip \end{list}}
+% Definición del entorno de Frase
+\newenvironment{FraseCentrada}%
+  % Alineación centrada con estilo cursiva y tamaño \small
+  {\item \begin{center}%
+    \small\em}% 
+  {\end{center}}
+
+% Definición del entorno de Frase Centrada
+\newenvironment{FuenteCentrada}%
+   % Alineación centrada y tamaño de letra \small   
+{\item \begin{center}\small}%
+  {\end{center}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

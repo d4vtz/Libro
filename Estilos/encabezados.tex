@@ -1,0 +1,62 @@
+%
+%                               Cabeceras
+%
+%-------------------------------------------------------------------------
+%
+%Copyright 2020 David Torrez Reyes
+%This file is part of BookTemplate.
+%
+%BookTemplate is free software: you can redistribute it and/or modify
+%it under the terms of the GNU General Public License as published by
+%the Free Software Foundation, either version 3 of the License, or
+%(at your option) any later version.
+%
+%BookTemplate is distributed in the hope that it will be useful,
+%but WITHOUT ANY WARRANTY; without even the implied warranty of
+%MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%GNU General Public License for more details.
+%
+%You should have received a copy of the GNU General Public License
+%along with BookTemplete.  If not, see <https://www.gnu.org/licenses/>.
+%-------------------------------------------------------------------------
+
+
+% Paquete que adminstra los cabeceras
+\usepackage{fancyhdr}
+% Definimos el estilo general de las cabeceras (fancy)
+\pagestyle{fancy}
+% Quitamos el estilo de encabezado por defecto
+\fancyhf{}
+% Predefinímos el comando \chaptermark para que solo nos aparezca
+% el numero de Capítulo y su nombre
+\renewcommand{\chaptermark}[1]{%
+\markboth{\textsc{ \thechapter.}\ #1}{}}
+% Predefinímos el comando \sectionmark para que solo nos aparezca
+% el numero de Sección y su nombre
+\renewcommand{\sectionmark}[1]{%
+\markright{\thesection.\ #1}{}}
+
+%Paginas pares
+\fancyhead[RO]{\rightmark}
+\fancyhead[LO]{\thepage}
+
+%Paginas impares 
+\fancyhead[LE]{ \leftmark}
+\fancyhead[RE]{\thepage}
+
+
+
+\newcommand{\cabecera}[1]{%
+    \fancyhead[RO]{\textsc{#1}}%
+    \fancyhead[LE]{\textsc{#1}}%
+}
+
+\newcommand{\Agradecimentos}{Agradecimientos\markright{Agradecimentos}}
+
+
+\fancypagestyle{plain}{%
+    \fancyhf{}
+    \fancyfoot[C]{\thepage}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+}

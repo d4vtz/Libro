@@ -53,10 +53,17 @@
 \documentclass[10pt,letterpaper,twoside]{book}
 
 
-% Incluimos el archivo preámbulo,tex que se encuentra en el directorio Estilos. De
+% Incluimos el archivo preámbulo.tex que se encuentra en el directorio Estilos. De
 % modo que cargamos todos los paquetes necesarios para la elaboración del documento.
 \include{Estilos/preambulo}
 
+
+% Incluimos mis ambientes
+\include{Estilos/entornos}
+
+\include{Estilos/encabezados}
+% Incluimos el archivo constantes.tex, en el cual tenemos definidos nuevos comandos
+% que ayudan a simplificar la escritura del código
 \include{Estilos/constantes}
 
 %----------------------------------------------------------------------------
@@ -65,5 +72,6 @@
 
 % Inicio del documento
 \begin{document}
-\include{Estructura/portada}    
+\include{Estructura/portada}
+\include{Estructura/agradecimentos}    
 \end{document}

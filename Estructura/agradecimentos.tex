@@ -1,0 +1,63 @@
+%
+%                            Agradecimientos
+%
+%-------------------------------------------------------------------------
+%
+%Copyright 2020 David Torrez Reyes
+%This file is part of BookTemplate.
+%
+%BookTemplate is free software: you can redistribute it and/or modify
+%it under the terms of the GNU General Public License as published by
+%the Free Software Foundation, either version 3 of the License, or
+%(at your option) any later version.
+%
+%BookTemplate is distributed in the hope that it will be useful,
+%but WITHOUT ANY WARRANTY; without even the implied warranty of
+%MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%GNU General Public License for more details.
+%
+%You should have received a copy of the GNU General Public License
+%along with BookTemplete.  If not, see <https://www.gnu.org/licenses/>.
+%-------------------------------------------------------------------------
+
+
+
+
+% Estilo de pagina vacío, No genera encabezado
+\thispagestyle{empty}
+% Dejando un espacio entre el margen superior y la frase
+\vspace*{0.4\textwidth}
+
+% Frase Celebre Centrada.... Ver entornos.tex
+\begin{FraseCelebreCentrada}
+  \begin{FraseCentrada}
+    Nos encontramos en los comienzos mismos de la era de la raza humana.\\
+    No es ilógico que tengamos o que tropecemos con problemas, \\
+    pero hay decenas de miles de años en el futuro. \\
+    Es responsabilidad nuestra hacer lo que podamos, \\
+    aprender lo que podamos, mejorar las soluciones y \\
+    transmitirlas a nuestros sucesores. \\
+    Es responsabilidad nuestra dejar las manos libres a las generaciones futuras
+  \end{FraseCentrada}
+  \begin{FuenteCentrada}
+    Richard P. Feynman
+  \end{FuenteCentrada}
+\end{FraseCelebreCentrada}
+
+% Nueva pagina
+\newpage
+
+\thispagestyle{fancy}
+\chapter*{Agradecimentos}
+\cabecera{Agradecimentos}
+\begin{FraseCelebre}
+  \begin{Frase}
+    Había una vez...
+  \end{Frase}
+  \begin{Fuente}
+    MeDicenDav
+  \end{Fuente}
+\end{FraseCelebre}
+
+\lipsum{2-50}
+

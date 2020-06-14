@@ -60,12 +60,13 @@
 
 % Incluimos mis ambientes
 \include{Estilos/entornos}
-
+% Incluimos el archivo encargado de generar los encabezados
 \include{Estilos/encabezados}
 % Incluimos el archivo constantes.tex, en el cual tenemos definidos nuevos comandos
 % que ayudan a simplificar la escritura del código
 \include{Estilos/constantes}
 
+\renewcommand{\chaptername}{Cap\’{\i}tulos}
 %----------------------------------------------------------------------------
 %                              Inicio del documento
 %----------------------------------------------------------------------------
@@ -73,5 +74,7 @@
 % Inicio del documento
 \begin{document}
 \include{Estructura/portada}
-\include{Estructura/agradecimentos}    
+\include{Estructura/agradecimentos}
+\include{Estructura/prefacio}    
+\tableofcontents
 \end{document}

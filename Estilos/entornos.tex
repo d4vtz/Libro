@@ -63,9 +63,9 @@
     % Definimos margen izquierdo de logitud 0.5 el espacio del texto
     \setlength{\leftmargin}{0.5\textwidth}%
     % No hay espacio extra entre párrafos de la lista 
-    \setlength{\parsep}{0cm}%
+    \setlength{\parsep}{0.5cm}%
     % Espacio vertical añadido al inicio y final de la lista
-    \addtolength{\topsep}{0.5cm}%
+    \addtolength{\topsep}{1.5cm}%
     }
   }
   {\unskip \end{list}}
@@ -74,23 +74,16 @@
 % Definición del entorno de Frase
 \newenvironment{Frase}%
   % Alineación a la derecha con estilo cursiva y tamaño \small
-  {\item \begin{flushright}%
+  {\item \begin{flushleft}%
     \small\em}% 
-  {\end{flushright}}
+  {\end{flushleft}}
 
-
-% Definición del entorno de Frase
-\newenvironment{FraseA}%
-  % Alineación a la derecha con estilo cursiva y tamaño \small
-  {\item \begin{center}%
-    \small\em}% 
-  {\end{center}}
 
 % Definición del entorno de Frase 
 \newenvironment{Fuente}%
    % Alineación a la derecha y tamaño de letra \small   
-{\item \begin{flushright}\small}%
-  {\end{flushright}}
+{\item \begin{center}\small}%
+  {\end{center}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 

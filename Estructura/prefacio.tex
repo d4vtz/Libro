@@ -1,8 +1,8 @@
 %
-%                           Constantes
+%                       Preámbulo del documento
 %
-%           Contiene constantes definidas como nuevos comandos
-%                para la rápida escritura del documento
+%           Contiene todos los paquetes necesarios para la
+%                       compilación del documento
 %
 %-------------------------------------------------------------------------
 %
@@ -24,14 +24,29 @@
 %-------------------------------------------------------------------------
 
 
-%   Titulo
-%----------------------------:
-% \titulo ---> \textbf{Notas de teoría cuántica de campos}
-\newcommand{\titulo}{Breve introducción de la teoría cuántica de campos}
+\chapter*{Prefacio}
+\cabecera{Prefacio}
+
+\begin{FraseCelebre}
+    \begin{Frase}
+        En ciencia uno intenta decir a la gente,\\
+        en una manera en que todos lo puedan entender,\\
+        algo que nunca nadie supo antes.\\
+        La poesía es exactamente lo contrario.
+    \end{Frase}
+    \begin{Fuente}
+        Paul Adrien Maurice Dirac
+    \end{Fuente}
+\end{FraseCelebre}
 
 
-%   Autor
-%----------------------------:
-% \titulo ---> \textbf{Notas de teoría cuántica de campos}
-\newcommand{\autor}{David Torrez Reyes}
+...
 
+
+
+
+
+
+\cleardoublepage
+\restauraCabecera
+\pagenumbering{arabic}

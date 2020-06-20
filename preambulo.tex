@@ -37,8 +37,6 @@
 % El paquete babel gestiona el idioma en el cual se desea trabajar, en
 % este caso español (spanish)
 \usepackage[spanish]{babel}
-%\addto{\captionsspanish}{\def\chaptername{}}
-%\renewcommand{\thechapter}{}
 
 
 % El paquete fontenc gestiona la codificación de salida del documento.
@@ -63,6 +61,7 @@
 % Con el comando \graphcspath indicamos el directorio en el cual se encuentran
 % las imágenes a utilizar 
 \usepackage{graphicx}
+% Definimos el directorio donde se guardan las imágenes
 \graphicspath{{Imagenes/}}
 
 
@@ -93,10 +92,17 @@
 \usepackage{amsthm}
 \usepackage{amssymb}
 
+% Paquetes necesarios para incluir el bookmark en el pdf y generar 
+% hipervínculos
 \usepackage{bookmark}
 \usepackage{hyperref}
+
 % Para crear un índice de palabras
 \usepackage{makeidx}
+\makeindex
 
+
+% Paquete que incluye una serie de comandos para la escritura de ecuaciones
+% símbolos relacionados a la física 
 \usepackage{physics}
 \usepackage{xparse}

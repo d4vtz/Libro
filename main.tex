@@ -29,34 +29,45 @@
 %
 %   Organización de la plantilla:
 %   
-%   main.tex:
-%   Carpeta:
-%           Estilos:
-%                   preámbulo.tex:
-%                   constantes.tex
-%                   entornos.tex
-%                   encabezados.tex
-%           Estructura:
-%                   portada.tex
-%                   agradecimentos.tex
-%                   prefacio.tex                   
-%           Capítulos:
-%                   capitulo1.tex
-%           Imágenes:
+%   main.tex
+%   preámbulo.tex
+%   Estilos:
+%           constantes.tex
+%           entornos.tex
+%           encabezados.tex
+%           colores.tex
+%   Estructura:
+%           portada.tex
+%           agradecimentos.tex
+%           prefacio.tex  
+%           tablaContenidos.tex
+%           bibliografía.tex
+%           indice_palabras.tex                 
+%   Capítulos:
+%           capitulo_01.tex
+%           ...
+%   Bibliografía:
+%           QFT.bib
+%           ...
+%   Imágenes:
+%           portada.pdf
+%           Fuentes:
 %                   ...
-%                   Fuentes:
-%           Bibliografía:
+%   Build:
+%           archivos_auxiliares
+%           ...
+%           main.pdf
 %
-%--------------------------------------------------------------------------
+%---------------------------------------------------------------
 
-% Definimos la clase de documento: En este caso book, con los parámetros opcionales
-% definimos el tamaÑo de letra (10pt), el tamaÑo de papel (letterpaper) y el formato
+%Definimos la clase de documento: En este caso book, con los parámetros opcionales
+% s el tamaño de letra (10pt), el tamaÑo de papel (letterpaper) y el formato
 % de impresión a dos lados.
 \documentclass[10pt,letterpaper,twoside]{book}
 
-% Incluimos el archivo preámbulo.tex que se encuentra en el directorio Estilos. De
+%Definimos el archivo preámbulo.tex que se encuentra en el directorio Estilos. De
 % modo que cargamos todos los paquetes necesarios para la elaboración del documento.
-\include{Estilos/preambulo}
+\include{preambulo}
 
 % Incluimos el archivo entornos, donde definimos entornos o ambientes creados
 % por mi, como frases Celebres, observaciones, etc.
@@ -69,7 +80,9 @@
 % que ayudan a simplificar la escritura del código
 \include{Estilos/constantes}
 
-\makeindex
+% Agregamos esquema de colores personalizados
+\include{Estilos/colores}
+
 %----------------------------------------------------------------------------
 %                              Inicio del documento
 %----------------------------------------------------------------------------
@@ -83,6 +96,8 @@
     \include{Estructura/tablaContenidos}
 % Capítulos
     \include{Capitulos/capitulo_01}
+
+% Bibliografía e índice alfabético
     \include{Estructura/bibliografia}
     \include{Estructura/inidice_palabras}
-    \end{document}
+\end{document}

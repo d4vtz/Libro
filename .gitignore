@@ -1,5 +1,12 @@
 #   Archivos ignorados por git
+
+#Carpetas
 build/Estilos
+build/Estructura
+build/Capitulos
+build/Bibliografia
+.vscode
+
+#Archivos
 build/main.*
 !build/main.pdf
-.vscode
